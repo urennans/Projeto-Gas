@@ -46,7 +46,7 @@ Os dois subprojetos fazem parte de uma proposta integrada, podendo compartilhar:
 
 ### Equipe 2 — Detector de Vazamento
 - Maely Vitória Gomes Lira
-- Maryanna Moraes Sousa
+- Maryana Moraes Sousa
 
 ## Status Atual
 - [x] Definição do tema

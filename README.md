@@ -1,8 +1,9 @@
-Projeto de Monitoramento do Peso do botijão de Gás para Estimar Quantidade Restante
+Projeto de Monitoramento do Peso do Botijão de Gás para Estimar Quantidade Restante
 
 Sistema embarcado de monitoramento de nível de gás GLP para botijões P13, desenvolvido como projeto da disciplina de Microcontroladores (UFC) e submetido ao SBESC.
 
 O sistema pesa continuamente o botijão via células de carga, calcula o gás restante em tempo real e envia os dados via Bluetooth para um aplicativo mobile, alertando o usuário antes do esgotamento.
+
 
 Como funciona
 
@@ -15,12 +16,14 @@ Converte para percentual: nivel_pct = (gas_kg / 13) * 100
 Transmite os dados via Bluetooth (HC-05) para o app mobile em JSON
 Aceita comando de tara remota disparado pelo app
 
+
+
 Arquitetura de hardware
 
 ComponenteFunçãoSTM32F103C8T6 (Blue Pill, 72 MHz)Microcontrolador principal4× célula de carga 50 kg (meia-ponte)Sensor de peso — ponte de Wheatstone completaHX711ADC 24 bits para leitura das célulasHC-05Comunicação Bluetooth com o app (USART1 — PA9/PA10)CH340 USB-serialMonitoramento de debug em tempo real (USART2 — PA2/PA3, 115200 baud)
-<img width="659" height="407" alt="funfas" src="https://github.com/user-attachments/assets/1eb63546-e0a5-4d43-901f-0a4fae2c4e00" />
-<img width="669" height="641" alt="funfando1" src="https://github.com/user-attachments/assets/210955b3-65ef-4679-95c6-a69cb54f445b" />
 
+<img width="659" height="407" alt="Diagrama de blocos do sistema" src="https://github.com/user-attachments/assets/1eb63546-e0a5-4d43-901f-0a4fae2c4e00" />
+<img width="669" height="641" alt="Esquemático de pinagem elétrica" src="https://github.com/user-attachments/assets/210955b3-65ef-4679-95c6-a69cb54f445b" />
 
 Protocolo de comunicação
 
@@ -47,24 +50,33 @@ O JSON é decodificado com JsonTextDecodeWithDictionaries. A leitura Bluetooth u
 
 Firmware
 
+
 Leitura HX711: hx711_read_average(10), 25º pulso de SCK para configuração de canal (Channel A, Gain 128)
 Conversão de 24 bits com extensão de sinal (int32_t) para complemento de dois
 Timeout de 200 ms (HAL_GetTick()) na leitura do HX711
 Calibração: SCALE = 29400.0f, offset via tara em runtime
 Saída dual UART (JSON idêntico em USART1 e USART2)
 
+
+
 Status do projeto
 
--Protótipo funcional demonstrado em banca
--Firmware e app com arquitetura estável
--Calibração mecânica pendente — tensão lateral da mangueira ainda interfere na leitura de peso
--Integração com subsistema de detecção de vazamento em andamento
--Estrutura final do gabinete (marcenaria) em desenvolvimento
+
+✅ Protótipo funcional demonstrado em banca
+✅ Firmware e app com arquitetura estável
+⚠️ Calibração mecânica pendente — tensão lateral da mangueira ainda interfere na leitura de peso
+⏳ Integração com subsistema de detecção de vazamento em andamento
+⏳ Estrutura final do gabinete (marcenaria) em desenvolvimento
+
+
 
 Ambiente de desenvolvimento
 
+
 STM32CubeIDE (Linux)
 MIT App Inventor
+
+
 
 Equipe
 

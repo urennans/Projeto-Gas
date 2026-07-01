@@ -53,11 +53,11 @@ Saída dual UART (JSON idêntico em USART1 e USART2)
 
 Status do projeto
 
-✅ Protótipo funcional demonstrado em banca
-✅ Firmware e app com arquitetura estável
-⚠️ Calibração mecânica pendente — tensão lateral da mangueira ainda interfere na leitura de peso
-⏳ Integração com subsistema de detecção de vazamento em andamento
-⏳ Estrutura final do gabinete (marcenaria) em desenvolvimento
+-Protótipo funcional demonstrado em banca
+-Firmware e app com arquitetura estável
+-Calibração mecânica pendente — tensão lateral da mangueira ainda interfere na leitura de peso
+-Integração com subsistema de detecção de vazamento em andamento
+-Estrutura final do gabinete (marcenaria) em desenvolvimento
 
 Ambiente de desenvolvimento
 

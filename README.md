@@ -18,6 +18,8 @@ Aceita comando de tara remota disparado pelo app
 Arquitetura de hardware
 
 ComponenteFunçãoSTM32F103C8T6 (Blue Pill, 72 MHz)Microcontrolador principal4× célula de carga 50 kg (meia-ponte)Sensor de peso — ponte de Wheatstone completaHX711ADC 24 bits para leitura das célulasHC-05Comunicação Bluetooth com o app (USART1 — PA9/PA10)CH340 USB-serialMonitoramento de debug em tempo real (USART2 — PA2/PA3, 115200 baud)
+<img width="659" height="407" alt="funfas" src="https://github.com/user-attachments/assets/1eb63546-e0a5-4d43-901f-0a4fae2c4e00" />
+<img width="669" height="641" alt="funfando1" src="https://github.com/user-attachments/assets/210955b3-65ef-4679-95c6-a69cb54f445b" />
 
 
 Protocolo de comunicação
